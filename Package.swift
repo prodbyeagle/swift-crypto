@@ -248,7 +248,7 @@ let package = Package(
 // Switch between local and remote dependencies depending on an environment variable
 if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
     package.dependencies += [
-        .package(url: "https://github.com/prodbyeagle/swift-asn1.git", from: "1.2.0")
+        .package(url: "https://github.com/prodbyeagle/swift-asn1.git", branch: "xcode-cloud")
     ]
 } else {
     package.dependencies += [
